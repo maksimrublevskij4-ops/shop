@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Оформление заказа</title>
+  <link rel="stylesheet" href="svaz.css" />
+  <link rel="stylesheet" href="index.java" />
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Заказать услугу</h1>
+      <p class="tagline">Быстрое оформление, отслеживание статуса и сообщения менеджеру</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="catalog">
+      <h2>Каталог услуг</h2>
+      <div class="cards" id="services">
+        <!-- карточки услуг подгрузятся через JS -->
+      </div>
+    </section>
+
+    <section class="order" id="order-section">
+      <h2>Оформить заказ</h2>
+      <form id="orderForm" class="form">
+        <label>
+          Имя
+          <input type="text" name="name" id="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" id="email" required />
+        </label>
+
+        <label>
+          Телефон
+          <input type="tel" name="phone" id="phone" />
+        </label>
+
+        <label>
+          Услуга
+          <select name="service" id="service" required>
+            <option value="">Оплата покупок</option>
+            <option value="">Розвиток розробників</option>
+
+          </select>
+        </label>
+
+        <label>
+          Описание / комментарий
+          <textarea name="notes" id="notes" rows="4"></textarea>
+        </label>
+
+        <label>
+          Прикрепить файл (не отправляется, демо)
+          <input type="file" id="file" />
+        </label>
+
+        <div class="form-row">
+          <button class="pay-btn">Оплатити зараз</button>
+          <button type="button" id="clearBtn" class="ghost">Відчистити</button>
+          
+
+        </div>
+      </form>
+    </section>
+
+    <section class="orders-list" id="orders-section">
+      <h2>Мої замовлення</h2>
+      <section class="my-products">
+  <h2>Мои товары</h2>
+  <p class="muted">Товары, которые доступны для заказа</p>
+
+  <div class="products-list">
+    <div class="product-card">
+      <h3>Дизайн визиток</h3>
+      <p>Макет и подготовка к печати</p>
+      <div class="p-bottom">
+        <span class="price">250₴</span>
+        <button class="buy-btn">Заказать</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h3>Логотип</h3>
+      <p>2 варианта + правки</p>
+      <div class="p-bottom">
+        <span class="price">1200₴</span>
+        <button class="buy-btn">Заказать</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h3>Баннер 1080×1920</h3>
+      <p>Для Instagram / Telegram</p>
+      <div class="p-bottom">
+        <span class="price">150₴</span>
+        <button class="buy-btn">Заказать</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <div id="orders"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Демо — сайт оформления заказов (HTML/CSS/JS)</small>
+    </div>
+    <h1>Підтримати команду</h1>
+    <section class="bank-card">
+  <h2>Платіжна картка для переказу</h2>
+  <div class="card-ui">
+    <div class="chip"></div>
+    <div class="number">5375 **** **** 1234</div>
+    <div class="bottom">
+      <div class="name">Рубльовський Максим</div>
+      <div class="date">12/27</div>
+    </div>
+  </div>
+  <button class="copy" onclick="copyNumber()">Скопіювати номер</button>
+</section>
+<div class="banner">
+  <p>Дякууємо за придбання товару чи підтримки команди🖤</p>
+</div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
